@@ -4,6 +4,7 @@ import ProgressBar from "@badrap/bar-of-progress";
 import Router from "next/router";
 import { ThemeProvider } from 'next-themes'
 import { Toaster } from 'react-hot-toast';
+import GlobalContextProvider from '@/context/Context';
 
 const progress = new ProgressBar({
   size: 4,
@@ -18,10 +19,11 @@ Router.events.on("routeChangeError", progress.finish);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
-      <Toaster position="top-center" reverseOrder={false} />
-      <Component {...pageProps} />
-    </ThemeProvider>
-
+    <GlobalContextProvider>
+      <ThemeProvider attribute="class">
+        <Toaster position="top-center" reverseOrder={false} />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </GlobalContextProvider>
   );
 }
