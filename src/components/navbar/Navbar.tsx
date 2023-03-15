@@ -14,10 +14,11 @@ type Props = {}
 
 export default function Navbar({ }: Props) {
     const { isActive, handleCartSidebar, itemQuantity, isClicked, deliveryPickup } = useGlobalContext()
-    const [nav, setNav] = useState(false)
+    const [nav, setNav] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
 
     const handleMenu = () => {
+        console.log(nav);
         setNav(!nav)
     }
     return (
@@ -98,7 +99,7 @@ export default function Navbar({ }: Props) {
             {nav ? <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0 duration-300'></div> : ''}
 
             {/* Sidedrawer Menu */}
-            <div className={`${nav ? 'left-0' : '-left-full'}  fixed left-0 top-0 w-[300px] h-screen bg-white dark:bg-slate-800 z-10  duration-700 shadow-lg`}>
+            <div className={`${nav ? 'left-0' : '-left-full'}  fixed  top-0 w-[300px] h-screen bg-white dark:bg-slate-800 z-10  duration-700 `}>
                 <AiOutlineClose onClick={handleMenu} size={25} className='text-black  dark:text-gray-300 absolute right-4 top-4 cursor-pointer' />
                 <h2 className='text-black  dark:text-gray-400  font-bold text-2xl p-4'>Best<span className=' font-bold'> Eats</span></h2>
                 <nav>
@@ -113,6 +114,7 @@ export default function Navbar({ }: Props) {
                     </ul>
                 </nav>
             </div>
+
         </div>
     )
 }
