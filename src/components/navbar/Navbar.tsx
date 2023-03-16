@@ -44,14 +44,14 @@ export default function Navbar({ }: Props) {
             </div>
 
             {/* Search Input */}
-            <div className='flex  items-center bg-gray-700 w-[200px] text-black  dark:text-gray-300 rounded-full px-2 sm:w-[400px] lg:w-[500px]'>
+            <div className='flex  items-center bg-gray-700 w-[150px] text-black  dark:text-gray-300 rounded-full px-2 sm:w-[400px] lg:w-[500px]'>
                 <AiOutlineSearch size={20} />
                 <input className='bg-transparent w-full p-2 focus:outline-none placeholder:text-black dark:placeholder:text-gray-300' type='text' placeholder='Search Food' />
             </div>
 
             <div className='flex items-center justify-center gap-4'>
                 {/* Cart */}
-                <a onClick={handleCartSidebar} className={` ${isActive ? ' bg-white' : ' bg-gray-700'} hidden md:flex relative cursor-pointer  items-center justify-center rounded-full w-[42px] h-[34px]`}>
+                <a onClick={handleCartSidebar} className={` ${isActive ? ' bg-white' : ' bg-gray-700'} flex relative cursor-pointer  items-center justify-center rounded-full w-[42px] h-[34px]`}>
                     <BsFillCartFill size={20} className='text-black  dark:text-gray-300' />
                     <div className='absolute bg-orange-600 -right-3 -top-4 text-[12px] w-[18px] h-[18px] text-black  dark:text-gray-300 rounded-full flex justify-center items-center'>
                         {itemQuantity}

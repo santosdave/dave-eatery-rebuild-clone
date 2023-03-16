@@ -5,6 +5,7 @@ import HeroSection from '@/components/content/HeroSection'
 import HeadlineCards from '@/components/content/HeadlineCards'
 import FoodSection from '@/components/content/FoodSection'
 import CategorySection from '@/components/content/CategorySection'
+import CartSidebar from '@/components/sidebar/CartSidebar'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <HeadlineCards/>
         <FoodSection/>
         <CategorySection/>
+        <CartSidebar/>
       </main>
     </motion.div>
   )
