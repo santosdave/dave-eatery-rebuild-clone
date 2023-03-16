@@ -34,7 +34,7 @@ export default function CartSidebar({ }: Props) {
           <div className='w-full flex justify-between items-center'>
             {/* total */}
             <div className='uppercase font-bold text-sm'>
-              <span className='mr-2'>Total:</span>$ {total}
+              <span className='mr-2'>Total:</span>KES {total}
             </div>
             {/* clear cart */}
             <div onClick={clearCart} className='cursor-pointer py-4 bg-orange-600 rounded-full text-white w-12 h-12 flex justify-center items-center'>

@@ -6,6 +6,7 @@ import HeadlineCards from '@/components/content/HeadlineCards'
 import FoodSection from '@/components/content/FoodSection'
 import CategorySection from '@/components/content/CategorySection'
 import CartSidebar from '@/components/sidebar/CartSidebar'
+import CartToggle from '@/components/sidebar/CartToggle'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <FoodSection/>
         <CategorySection/>
         <CartSidebar/>
+        <CartToggle/>
       </main>
     </motion.div>
   )
