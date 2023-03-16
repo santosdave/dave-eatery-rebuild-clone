@@ -37,14 +37,20 @@ export default function CartSidebar({ }: Props) {
               <span className='mr-2'>Total:</span>KES {total}
             </div>
             {/* clear cart */}
-            <div onClick={clearCart} className='cursor-pointer py-4 bg-orange-600 rounded-full text-white w-12 h-12 flex justify-center items-center'>
-              <FiTrash2 />
-            </div>
+            {total > 0 &&
+              <div onClick={clearCart} className='cursor-pointer py-4 bg-orange-600 rounded-full text-white w-12 h-12 flex justify-center items-center'>
+                <FiTrash2 />
+              </div>
+            }
+
           </div>
 
-          <button className='lg:m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
-            Proceed to checkout
-          </button>
+          {total > 0 &&
+            <button className='lg:m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white '>
+              Proceed to checkout
+            </button>
+          }
+
         </div>
       </div>
     </>

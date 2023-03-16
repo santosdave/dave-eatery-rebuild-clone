@@ -28,9 +28,9 @@ export default function Navbar({ }: Props) {
                     <AiOutlineMenu size={30} />
                 </div>
                 <h1 className='capitalize text-2xl sm:text-3xl lg:text-4xl px-2'>
-                    best {' '}
+                    Daves {' '}
                     <span className='font-bold'>
-                        eats
+                        eatery
                     </span>
                 </h1>
                 <div className='hidden lg:flex items-center bg-gray-400 dark:bg-slate-700 rounded-full p-1 text-[16px]' onClick={deliveryPickup}>
@@ -101,7 +101,7 @@ export default function Navbar({ }: Props) {
             {/* Sidedrawer Menu */}
             <div className={`${nav ? 'left-0' : '-left-full'}  fixed  top-0 w-[300px] h-screen bg-white dark:bg-slate-800 z-10  duration-700 `}>
                 <AiOutlineClose onClick={handleMenu} size={25} className='text-black  dark:text-gray-300 absolute right-4 top-4 cursor-pointer' />
-                <h2 className='text-black  dark:text-gray-400  font-bold text-2xl p-4'>Best<span className=' font-bold'> Eats</span></h2>
+                <h2 className='text-black  dark:text-gray-400  font-bold text-2xl p-4'>Daves<span className=' font-bold'> Eatery</span></h2>
                 <nav>
                     <ul className='text-black  dark:text-gray-300  p-4'>
                         <li className=' text-xl py-4 flex'><TbTruckDelivery size={25} className='mr-4' /> Orders</li>

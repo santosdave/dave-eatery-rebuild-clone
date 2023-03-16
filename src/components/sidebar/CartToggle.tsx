@@ -14,7 +14,7 @@ export default function CartToggle({ }: Props) {
             viewport={{ once: true }}
             className="md:hidden"
         >
-            <button onClick={handleCartSidebar}>
+            <div onClick={handleCartSidebar}>
                 <div className={`${isOpen ? 'top-[90%] left-[46%]': 'top-[70%] left-[80%]' } z-50  shadow-2xl  my-2 fixed flex flex-col justify-center items-center text-black  dark:text-gray-300 w-12 h-12 bg-orange-600 rounded-full`}>
                     <div className='transition-all duration-700 delay-100'>
                         {isOpen ? <div><RxCross2 className='text-xl ' /></div> :
@@ -27,7 +27,7 @@ export default function CartToggle({ }: Props) {
                         }
                     </div>
                 </div>
-            </button>
+            </div>
         </motion.div>
     )
 }
