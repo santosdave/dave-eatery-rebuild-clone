@@ -51,12 +51,12 @@ export default function Navbar({ }: Props) {
 
             <div className='flex items-center justify-center gap-4'>
                 {/* Cart */}
-                <button onClick={handleCartSidebar} className={` ${isActive ? ' bg-white' : ' bg-gray-700'} hidden md:flex relative items-center justify-center rounded-full w-[42px] h-[34px]`}>
+                <a onClick={handleCartSidebar} className={` ${isActive ? ' bg-white' : ' bg-gray-700'} hidden md:flex relative cursor-pointer  items-center justify-center rounded-full w-[42px] h-[34px]`}>
                     <BsFillCartFill size={20} className='text-black  dark:text-gray-300' />
                     <div className='absolute bg-orange-600 -right-3 -top-4 text-[12px] w-[18px] h-[18px] text-black  dark:text-gray-300 rounded-full flex justify-center items-center'>
                         {itemQuantity}
                     </div>
-                </button>
+                </a>
 
                 {/* Theme Toogle */}
                 <div>

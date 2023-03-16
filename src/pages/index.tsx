@@ -3,6 +3,8 @@ import {motion} from "framer-motion"
 import Navbar from '@/components/navbar/Navbar'
 import HeroSection from '@/components/content/HeroSection' 
 import HeadlineCards from '@/components/content/HeadlineCards'
+import FoodSection from '@/components/content/FoodSection'
+import CategorySection from '@/components/content/CategorySection'
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
       <main className='mt-20'>
         <HeroSection/>
         <HeadlineCards/>
+        <FoodSection/>
+        <CategorySection/>
       </main>
     </motion.div>
   )
