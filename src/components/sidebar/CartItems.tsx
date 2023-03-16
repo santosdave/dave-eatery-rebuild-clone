@@ -4,7 +4,13 @@ import { IoMdAdd, IoMdClose, IoMdRemove } from 'react-icons/io'
 import { motion } from "framer-motion"
 
 type Props = {
-    item: any
+    item: {
+        id:number;
+        name:string;
+        image:string;
+        price:number;
+        quantity:number;
+    }
 }
 
 export default function CartItems({ item }: Props) {
@@ -63,7 +69,7 @@ export default function CartItems({ item }: Props) {
 
                     </div>
                     <div>
-                        <div className='flex-1 flex  justify-end items-center text-primary font-medium'>{`KES ${parseFloat(price * quantity).toFixed(2)}`}</div>
+                        <div className='flex-1 flex  justify-end items-center text-primary font-medium'>{`KES ${(price * quantity).toFixed(2)}`}</div>
                     </div>
 
                 </div>

@@ -7,8 +7,25 @@ export interface props {
     children?: React.ReactNode;
 }
 
+export type GlobalContextType = {
+    isOpen: boolean;
+    isActive: boolean;
+    handleCartSidebar: () => void;
+    cart: [];
+    increaseQuantity: (id: any) => void;
+    decreaseQuantity: (id: any) => void;
+    removeFromCart: (id: any) => void;
+    addToCart: (food: any, id: any) =>void;
+    clearCart: () => void;
+    itemQuantity: number;
+    total: number;
+    deliveryPickup: () => void; 
+    isClicked: boolean; 
+  };
 
-const GlobalContext = createContext(null);
+
+
+const GlobalContext = createContext<GlobalContextType | null>(null);
 
 const GlobalContextProvider = ({ children }: props) => {
 
@@ -28,7 +45,7 @@ const GlobalContextProvider = ({ children }: props) => {
     const [total, setTotal] = useState<number>(0)
 
     // deliverly and pickup state
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState<boolean>(false)
 
     // add to cart
     const addToCart = (food: any, id: any) => {
@@ -129,6 +146,9 @@ const GlobalContextProvider = ({ children }: props) => {
         }
     }, [cart])
 
+
+   
+
     return (
         <GlobalContext.Provider value={{
             isOpen,
@@ -150,6 +170,6 @@ const GlobalContextProvider = ({ children }: props) => {
 }
 
 export const useGlobalContext = () => {
-    return useContext(GlobalContext)
+    return useContext(GlobalContext) as GlobalContextType
 }
 export default GlobalContextProvider

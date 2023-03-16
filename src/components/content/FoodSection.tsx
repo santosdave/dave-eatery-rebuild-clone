@@ -10,6 +10,7 @@ type Props = {}
 export default function FoodSection({ }: Props) {
     const [foods, setFoods] = useState(FoodData);
 
+
     const { addToCart } = useGlobalContext();
 
 
