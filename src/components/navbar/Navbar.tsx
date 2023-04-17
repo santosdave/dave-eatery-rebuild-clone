@@ -18,7 +18,7 @@ export default function Navbar({ }: Props) {
     const { resolvedTheme, setTheme } = useTheme();
 
     const handleMenu = () => {
-        console.log(nav);
+        
         setNav(!nav)
     }
     return (
